@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    maven { url "https://frcmaven.wpi.edu/artifactory/release/" }
+}
+
+dependencies {
+    // Add ntcore-java
+    compile "edu.wpi.first.ntcore:ntcore-java:2021.1.2"
+
+    // Add wpiutil-java
+    compile "edu.wpi.first.wpiutil:wpiutil-java:2021.1.2"
+
+    runtime "edu.wpi.first.ntcore:ntcore-jni:2021.1.2:windowsx86-64"
+}
+
+test {
+    useJUnitPlatform()
+}
